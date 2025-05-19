@@ -47,3 +47,8 @@ Update title and description:
 ```shell
 curl --header "Content-Type: application/json" --request PUT --data '{"id":19,"name":"New Café (UBT)","description":"My description","type":"CAFE","campus":"MAIN","street":"Teststraße","houseNumber":"99","postalCode":12345,"city":"Bayreuth"}%' http://localhost:8080/api/pos/19 # set correct task id here and in the body
 ```
+
+#### POST-Anfrage zum Erstellen eines POS-Eintrags
+
+curl --header "Content-Type: application/json" --request POST --data '{"name":"Stadtbäckerei Schaller GmbH","description":"Frische Backware","type":"BAKERY","campus":"MAIN","street":"Nürnberger Str.","houseNumber":"3b","postalCode":95448,"city":"Bayreuth"}%' http://localhost:8080/api/pos
+{"id":4,"createdAt":"2025-05-19T21:33:42.447934242","updatedAt":"2025-05-19T21:33:42.44794628","name":"Stadtbäckerei Schaller GmbH","description":"Frische Backware","type":"BAKERY","campus":"MAIN","street":"Nürnberger Str.","houseNumber":"3b","postalCode":95448,"city":"Bayreuth"}
